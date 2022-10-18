@@ -14,6 +14,13 @@
 		851033F228F94B6E002B95C0 /* SwiftUIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851033F128F94B6E002B95C0 /* SwiftUIAppTests.swift */; };
 		851033FC28F94B6E002B95C0 /* SwiftUIAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851033FB28F94B6E002B95C0 /* SwiftUIAppUITests.swift */; };
 		851033FE28F94B6E002B95C0 /* SwiftUIAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851033FD28F94B6E002B95C0 /* SwiftUIAppUITestsLaunchTests.swift */; };
+		8510340B28FD32D0002B95C0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510340A28FD32D0002B95C0 /* Home.swift */; };
+		8510340D28FD4EC0002B95C0 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510340C28FD4EC0002B95C0 /* HomeList.swift */; };
+		8510340F28FD67BF002B95C0 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8510340E28FD67BF002B95C0 /* BlurView.swift */; };
+		854F961928FE827B00CDE32E /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F961828FE827B00CDE32E /* UpdateList.swift */; };
+		854F961B28FE8DD000CDE32E /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F961A28FE8DD000CDE32E /* UpdateDetail.swift */; };
+		854F961D28FE92DF00CDE32E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F961C28FE92DF00CDE32E /* TabBar.swift */; };
+		854F962128FEA44800CDE32E /* CertificateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F962028FEA44800CDE32E /* CertificateRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		851033F728F94B6E002B95C0 /* SwiftUIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		851033FB28F94B6E002B95C0 /* SwiftUIAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppUITests.swift; sourceTree = "<group>"; };
 		851033FD28F94B6E002B95C0 /* SwiftUIAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8510340A28FD32D0002B95C0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		8510340C28FD4EC0002B95C0 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
+		8510340E28FD67BF002B95C0 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		854F961828FE827B00CDE32E /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		854F961A28FE8DD000CDE32E /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		854F961C28FE92DF00CDE32E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		854F962028FEA44800CDE32E /* CertificateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +109,14 @@
 			isa = PBXGroup;
 			children = (
 				851033E028F94B6B002B95C0 /* SwiftUIAppApp.swift */,
+				854F961C28FE92DF00CDE32E /* TabBar.swift */,
+				8510340A28FD32D0002B95C0 /* Home.swift */,
+				8510340C28FD4EC0002B95C0 /* HomeList.swift */,
+				854F962028FEA44800CDE32E /* CertificateRow.swift */,
 				851033E228F94B6B002B95C0 /* ContentView.swift */,
+				854F961828FE827B00CDE32E /* UpdateList.swift */,
+				854F961A28FE8DD000CDE32E /* UpdateDetail.swift */,
+				8510340E28FD67BF002B95C0 /* BlurView.swift */,
 				851033E428F94B6D002B95C0 /* Assets.xcassets */,
 				851033E628F94B6D002B95C0 /* Preview Content */,
 			);
@@ -258,6 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				851033E328F94B6B002B95C0 /* ContentView.swift in Sources */,
+				854F961928FE827B00CDE32E /* UpdateList.swift in Sources */,
+				8510340B28FD32D0002B95C0 /* Home.swift in Sources */,
+				854F961D28FE92DF00CDE32E /* TabBar.swift in Sources */,
+				854F962128FEA44800CDE32E /* CertificateRow.swift in Sources */,
+				854F961B28FE8DD000CDE32E /* UpdateDetail.swift in Sources */,
+				8510340F28FD67BF002B95C0 /* BlurView.swift in Sources */,
+				8510340D28FD4EC0002B95C0 /* HomeList.swift in Sources */,
 				851033E128F94B6B002B95C0 /* SwiftUIAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
