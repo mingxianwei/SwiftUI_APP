@@ -7,10 +7,17 @@
 
 import SwiftUI
 
+
+let statusBarHeight: CGFloat =  SwiftUIApp.keyWindow?.windowScene?.statusBarManager!.statusBarFrame.size.height ?? 0
+let screen = SwiftUIApp.keyWindow?.bounds ?? CGRectZero
+
+
 struct Home: View {
     
     @State var showMenu  = false
     @State var showProfile = false
+    
+    @State var showSetting = false
     
     var body: some View {
         ZStack {
@@ -27,21 +34,26 @@ struct Home: View {
                 .animation(.spring(), value: showProfile)
             
             MenuButtonView(show: $showMenu)
-                .offset(x: -30,y: showProfile ? 0 : 88)
+                .offset(x: -30,y: showProfile ? statusBarHeight : 88)
                 .animation(.spring(), value: showProfile)
             
             MenuRightView(show: $showProfile)
-                .offset(x:-16,y: showProfile ? 0 : 88)
+                .offset(x:-16,y: showProfile ? statusBarHeight : 88)
                 .animation(.spring(), value: showProfile)
             
-            MenuView(showMenu: $showMenu)
+            MenuView(showMenu: $showMenu,showSettings: $showSetting)
         }
+        .background(Color("background"))
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        Group {
+            Home().previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
+            Home().previewDevice(PreviewDevice(rawValue: "iPad Pro"))
+        }
     }
 }
 
@@ -71,6 +83,7 @@ struct Menu: Identifiable {
 let meunData = [
     Menu(title: "My Account", icon: "person.circle"),
     Menu(title: "Billing", icon: "creditcard"),
+    Menu(title: "Sttings", icon: "gearshape"),
     Menu(title: "Team", icon: "person.2"),
     Menu(title: "Sign Out", icon: "arrow.uturn.down")
 ]
@@ -78,28 +91,43 @@ let meunData = [
 struct MenuView: View {
     var menu = meunData
     @Binding var showMenu: Bool
+    @Binding var showSettings:Bool
     
     var body: some View {
-        VStack(alignment: .leading , spacing: 20.0) {
-            ForEach(menu) { item in
-                MenuRow(iconImageName:item.icon, text: item.title)
+        HStack {
+            VStack(alignment: .leading , spacing: 20.0) {
+                ForEach(menu) { item in
+                    if item.title == "Sttings" {
+                        Button {
+                            showSettings.toggle()
+                        } label: {
+                            MenuRow(iconImageName:item.icon, text: item.title)
+                        }.sheet(isPresented: $showSettings) {
+//                            Settings()
+                        }
+                        
+                    } else {
+                        MenuRow(iconImageName:item.icon, text: item.title)
+                    }
+                    
+                }
+                Spacer()
             }
+            .padding(.top,60)
+            .padding(30)
+            .frame(minWidth: 0,maxWidth: .infinity)
+            .background(Color("background"))
+            .cornerRadius(30)
+            .padding(.trailing,60)
+            .shadow(radius: 20)
+            .rotation3DEffect(Angle(degrees: showMenu ? 0 : 30), axis: (x: 0, y: 5.0, z: 0))
+            .animation(.spring(), value: showMenu)
+            .offset(x: showMenu ? 0 : -UIScreen.main.bounds.width)
+            
+            .onTapGesture {self.showMenu.toggle()}
             Spacer()
         }
-        
-        .padding(.top,60)
-        .padding(30)
-        .frame(minWidth: 0,maxWidth: .infinity)
-        .background(Color("background"))
-        .cornerRadius(30)
-        .padding(.trailing,60)
-        .shadow(radius: 20)
-        .rotation3DEffect(Angle(degrees: showMenu ? 0 : 30), axis: (x: 0, y: 5.0, z: 0))
-        .animation(.spring(), value: showMenu)
-        .offset(x: showMenu ? 0 : -UIScreen.main.bounds.width)
-        
-        .onTapGesture {self.showMenu.toggle()}
-        .edgesIgnoringSafeArea([.bottom])  //去掉安全区域的方法
+        .padding(.top ,statusBarHeight)
     }
 }
 

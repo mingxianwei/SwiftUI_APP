@@ -19,7 +19,6 @@ struct HomeList: View {
                         Text("Course")
                             .font(.title)
                             .fontWeight(.heavy)
-                        
                         Text("22 courses")
                             .font(.subheadline)
                             .foregroundColor(.gray)
@@ -40,7 +39,7 @@ struct HomeList: View {
                                 GeometryReader(content: { GeometryProxy in
                                     CourseView(course: datum)
                                         .padding(.trailing,20)
-                                        .rotation3DEffect(Angle(degrees:Double(GeometryProxy.frame(in: .global).minX) / -20.0), axis: (x: 0, y: 50.0, z: 0))
+                                        .rotation3DEffect(Angle(degrees:Double(GeometryProxy.frame(in: .global).minX - 40 ) / -15), axis: (x: 0, y: 50, z: 0))
                                 })
                                 .frame(width: 246,height: 360)
                             }.sheet(isPresented: $showModel) {
@@ -62,7 +61,12 @@ struct HomeList: View {
 
 struct HomeList_Previews: PreviewProvider {
     static var previews: some View {
-        HomeList()
+        Group {
+            Home().previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
+            Home().previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+            Home().previewDevice(PreviewDevice(rawValue: "iPhone 14 Plus"))
+            Home().previewDevice(PreviewDevice(rawValue: "iPad Pro"))
+        }
     }
 }
 

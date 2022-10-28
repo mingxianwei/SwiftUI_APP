@@ -31,7 +31,7 @@ struct TabBar: View {
                     Text("Updates")
                 }
             }.tag(3)
-        }.edgesIgnoringSafeArea([.bottom])
+        }.edgesIgnoringSafeArea([.top])
             .background(Color.gray)
     }
     

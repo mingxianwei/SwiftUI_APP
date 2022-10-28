@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		851033E128F94B6B002B95C0 /* SwiftUIAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851033E028F94B6B002B95C0 /* SwiftUIAppApp.swift */; };
+		851033E128F94B6B002B95C0 /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851033E028F94B6B002B95C0 /* SwiftUIApp.swift */; };
 		851033E328F94B6B002B95C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851033E228F94B6B002B95C0 /* ContentView.swift */; };
 		851033E528F94B6D002B95C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851033E428F94B6D002B95C0 /* Assets.xcassets */; };
 		851033E828F94B6D002B95C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851033E728F94B6D002B95C0 /* Preview Assets.xcassets */; };
@@ -42,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		851033DD28F94B6B002B95C0 /* SwiftUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		851033E028F94B6B002B95C0 /* SwiftUIAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppApp.swift; sourceTree = "<group>"; };
+		851033E028F94B6B002B95C0 /* SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
 		851033E228F94B6B002B95C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		851033E428F94B6D002B95C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		851033E728F94B6D002B95C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		851033DF28F94B6B002B95C0 /* SwiftUIApp */ = {
 			isa = PBXGroup;
 			children = (
-				851033E028F94B6B002B95C0 /* SwiftUIAppApp.swift */,
+				851033E028F94B6B002B95C0 /* SwiftUIApp.swift */,
 				854F961C28FE92DF00CDE32E /* TabBar.swift */,
 				8510340A28FD32D0002B95C0 /* Home.swift */,
 				8510340C28FD4EC0002B95C0 /* HomeList.swift */,
@@ -286,7 +286,7 @@
 				854F961B28FE8DD000CDE32E /* UpdateDetail.swift in Sources */,
 				8510340F28FD67BF002B95C0 /* BlurView.swift in Sources */,
 				8510340D28FD4EC0002B95C0 /* HomeList.swift in Sources */,
-				851033E128F94B6B002B95C0 /* SwiftUIAppApp.swift in Sources */,
+				851033E128F94B6B002B95C0 /* SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -427,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
