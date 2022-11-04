@@ -8,10 +8,6 @@
 import SwiftUI
 
 
-let statusBarHeight: CGFloat =  SwiftUIApp.keyWindow?.windowScene?.statusBarManager!.statusBarFrame.size.height ?? 0
-let screen = SwiftUIApp.keyWindow?.bounds ?? CGRectZero
-
-
 struct Home: View {
     
     @State var showMenu  = false
@@ -20,31 +16,33 @@ struct Home: View {
     @State var showSetting = false
     
     var body: some View {
-        ZStack {
-            ///
-            HomeList()
-                .blur(radius: showMenu ? 20 : 0)
-                .scaleEffect(showMenu ? 0.95 : 1)
-                .animation(.default, value: showMenu)
-            ///
-            ContentView()
-                .cornerRadius(30)
-                .shadow(radius: 20)
-                .offset(y:showProfile ? 0 : UIScreen.main.bounds.height)
-                .animation(.spring(), value: showProfile)
-            
-            MenuButtonView(show: $showMenu)
-                .offset(x: -30,y: showProfile ? statusBarHeight : 88)
-                .animation(.spring(), value: showProfile)
-            
-            MenuRightView(show: $showProfile)
-                .offset(x:-16,y: showProfile ? statusBarHeight : 88)
-                .animation(.spring(), value: showProfile)
-            
-            MenuView(showMenu: $showMenu,showSettings: $showSetting)
-        }
-        .background(Color("background"))
+        NavigationView {
+            ZStack {
+                ///
+                HomeList()
+                    .blur(radius: showMenu ? 20 : 0)
+                    .scaleEffect(showMenu ? 0.95 : 1)
+                    .animation(.default, value: showMenu)
+                ///
+                ContentView()
+                    .cornerRadius(30)
+                    .shadow(radius: 20)
+                    .offset(y:showProfile ? 0 : UIScreen.main.bounds.height)
+                    .animation(.spring(), value: showProfile)
+                
+                MenuButtonView(show: $showMenu)
+                    .offset(x: -30,y: 88)
+                    .animation(.spring(), value: showProfile)
+                
+                MenuRightView(show: $showProfile)
+                    .offset(x:-16,y: 88)
+                    .animation(.spring(), value: showProfile)
+                
+                MenuView(showMenu: $showMenu,showSettings: $showSetting)
+            }
+            .background(Color("background"))
         .edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
@@ -127,7 +125,7 @@ struct MenuView: View {
             .onTapGesture {self.showMenu.toggle()}
             Spacer()
         }
-        .padding(.top ,statusBarHeight)
+        .padding(.top ,88)
     }
 }
 

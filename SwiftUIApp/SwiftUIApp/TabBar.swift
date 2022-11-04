@@ -10,13 +10,11 @@ import SwiftUI
 struct TabBar: View {
     var body: some View {
         TabView() {
-
-            Home().tabItem {
-                VStack {
-                    Image("IconHome")
-                    Text("home")
+            Home()
+                .tag(1)
+                .tabItem {
+                    Label("Home", image: "IconHome")
                 }
-            }.tag(1)
             
             ContentView().tabItem {
                 VStack {
@@ -31,8 +29,10 @@ struct TabBar: View {
                     Text("Updates")
                 }
             }.tag(3)
-        }.edgesIgnoringSafeArea([.top])
-            .background(Color.gray)
+        }
+        //        .edgesIgnoringSafeArea([.top,.bottom])
+        .foregroundColor(Color.black)
+        .background(Color.gray)
     }
     
 }
