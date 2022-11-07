@@ -12,7 +12,8 @@ struct SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
 //            TabBar()
-            MatchedGrometryEffectExample2()
+//            MatchedGrometryEffectExample2()
+            AppTabBarView()
         }
     }
 }

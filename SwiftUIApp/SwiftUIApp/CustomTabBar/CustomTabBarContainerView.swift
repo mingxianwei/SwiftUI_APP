@@ -7,53 +7,34 @@
 
 import SwiftUI
 
-
-//struct TabView2<SelectionValue, Content> : View where SelectionValue : Hashable, Content : View{
-//
-//}
-//
-//
-//struct TabView3<SelectionValue, Content> : View where SelectionValue : Hashable, Content : View{
-//
-//}
-
-
 struct CustomTabBarContainerView<Content: View>: View {
     
     let content:Content
     @Binding var selection: TabBarItem
-    @State private var tabs: [TabBarItem] =  [
-        TabBarItem(iconName: "house", title: "Home", color: Color.red),
-        TabBarItem(iconName: "heart", title: "Favorites", color: Color.blue),
-        TabBarItem(iconName: "person", title: "Profile", color: Color.red)
-    ]
+    @State private var tabs: [TabBarItem] =  [.home,.profile,.favorites]
     
     init(selection: Binding<TabBarItem>, @ViewBuilder content: () -> Content){
         self._selection = selection
         self.content = content()
     }
+    
     var body: some View {
-        VStack{
-            ZStack{
-                content
-            }
-            CustomTabBarView(tabs: tabs, selection: $selection)
+        ZStack(alignment: .bottom){
+            content
+                .edgesIgnoringSafeArea(.vertical)
+            CustomTabBarView(tabs: tabs, selection: $selection, localSelection: tabs.first!)
         }
+        .onPreferenceChange(TabBarItemPreferenceKey.self) { value in self.tabs = value}
     }
 }
 
 struct CustomTabBarContainnerView_Previews: PreviewProvider {
     
-    static let tabs: [TabBarItem] = [
-        TabBarItem(iconName: "house", title: "Home", color: Color.red),
-        TabBarItem(iconName: "heart", title: "Favorites", color: Color.blue),
-        TabBarItem(iconName: "person", title: "Profile", color: Color.red)
-    ]
-    
+    static let tabs: [TabBarItem] = [.home,.favorites,.profile]
     static var previews: some View {
-        
         CustomTabBarContainerView(selection: .constant(tabs.first!)) {
             Color.red
         }
     }
 }
+

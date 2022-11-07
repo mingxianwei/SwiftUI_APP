@@ -34,6 +34,8 @@
 		85ECC0D1291502B20013871F /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D0291502B20013871F /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 		85ECC0D429150EB90013871F /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D329150EB90013871F /* CustomTabBarView.swift */; };
 		85ECC0D62915154D0013871F /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D52915154D0013871F /* CustomTabBarContainerView.swift */; };
+		85ECC0D82918ED9E0013871F /* TabBarItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D72918ED9E0013871F /* TabBarItemPreferenceKey.swift */; };
+		85ECC0DA2918F1CB0013871F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D92918F1CB0013871F /* TabBarItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		85ECC0D0291502B20013871F /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		85ECC0D329150EB90013871F /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		85ECC0D52915154D0013871F /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		85ECC0D72918ED9E0013871F /* TabBarItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemPreferenceKey.swift; sourceTree = "<group>"; };
+		85ECC0D92918F1CB0013871F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,8 @@
 		85ECC0D229150C5B0013871F /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				85ECC0D92918F1CB0013871F /* TabBarItem.swift */,
+				85ECC0D72918ED9E0013871F /* TabBarItemPreferenceKey.swift */,
 				854F961C28FE92DF00CDE32E /* AppTabBarView.swift */,
 				85ECC0D329150EB90013871F /* CustomTabBarView.swift */,
 				85ECC0D52915154D0013871F /* CustomTabBarContainerView.swift */,
@@ -339,6 +345,7 @@
 				85ECC0C72914E4280013871F /* AnmateableBootcamp.swift in Sources */,
 				851033E328F94B6B002B95C0 /* ContentView.swift in Sources */,
 				854F961928FE827B00CDE32E /* UpdateList.swift in Sources */,
+				85ECC0DA2918F1CB0013871F /* TabBarItem.swift in Sources */,
 				8510340B28FD32D0002B95C0 /* Home.swift in Sources */,
 				854F961D28FE92DF00CDE32E /* AppTabBarView.swift in Sources */,
 				85ECC0D62915154D0013871F /* CustomTabBarContainerView.swift in Sources */,
@@ -350,6 +357,7 @@
 				85ECC0D1291502B20013871F /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				8510340D28FD4EC0002B95C0 /* HomeList.swift in Sources */,
 				85ECC0B9291380C70013871F /* ViewModifierBootCamp.swift in Sources */,
+				85ECC0D82918ED9E0013871F /* TabBarItemPreferenceKey.swift in Sources */,
 				85ECC0CB2914F3CE0013871F /* PerferenceKeyBootcamp.swift in Sources */,
 				851033E128F94B6B002B95C0 /* SwiftUIApp.swift in Sources */,
 				85ECC0C92914EB5B0013871F /* GenericsBootcamp .swift in Sources */,
