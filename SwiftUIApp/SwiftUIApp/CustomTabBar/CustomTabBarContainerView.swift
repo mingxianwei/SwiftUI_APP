@@ -23,6 +23,7 @@ struct CustomTabBarContainerView<Content: View>: View {
             content
                 .edgesIgnoringSafeArea(.vertical)
             CustomTabBarView(tabs: tabs, selection: $selection, localSelection: tabs.first!)
+//                .offset(y:UIScreen.main.bounds.height-84)
         }
         .onPreferenceChange(TabBarItemPreferenceKey.self) { value in self.tabs = value}
     }

@@ -12,41 +12,21 @@ struct AppTabBarView: View {
     @State private var selection: String = "Home"
     @State private var tabSelection: TabBarItem = .home
     
-    
     var body: some View {
         CustomTabBarContainerView(selection: $tabSelection) {
             Color.red
+//            Home()
                 .tabBarItem(tab: .home,selection: $tabSelection)
-            
+
             Color.green
+//            ContentView()
                 .tabBarItem(tab: .favorites,selection: $tabSelection)
             
-            Color.blue
+            Color.orange
+//            UpdateList()
                 .tabBarItem(tab: .profile,selection: $tabSelection  )
         }
     }
-        
-            
-            
-//            Home()
-//                .tabItem {
-//                    Label("Home", image: "IconHome")
-//                }
-//
-//            ContentView().tabItem {
-//                VStack {
-//                    Image("IconCards")
-//                    Text("Certificates")
-//                }
-//            }
-//
-//            UpdateList().tabItem {
-//                VStack {
-//                    Image("IconSettings")
-//                    Text("Updates")
-//                }
-//            }
-    
 }
 
 struct TabBar_Previews: PreviewProvider {

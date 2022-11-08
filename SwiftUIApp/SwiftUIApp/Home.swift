@@ -16,7 +16,6 @@ struct Home: View {
     @State var showSetting = false
     
     var body: some View {
-        NavigationView {
             ZStack {
                 ///
                 HomeList()
@@ -39,10 +38,7 @@ struct Home: View {
                     .animation(.spring(), value: showProfile)
                 
                 MenuView(showMenu: $showMenu,showSettings: $showSetting)
-            }
-            .background(Color("background"))
-        .edgesIgnoringSafeArea(.all)
-        }
+            }.background(Color("background"))
     }
 }
 
@@ -101,7 +97,7 @@ struct MenuView: View {
                         } label: {
                             MenuRow(iconImageName:item.icon, text: item.title)
                         }.sheet(isPresented: $showSettings) {
-//                            Settings()
+                            //TODO: 添加跳转
                         }
                         
                     } else {

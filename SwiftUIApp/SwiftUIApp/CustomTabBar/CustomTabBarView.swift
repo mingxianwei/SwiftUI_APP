@@ -8,8 +8,6 @@
 import SwiftUI
 
 
-
-
 struct CustomTabBarView: View {
     
     let tabs: [TabBarItem]
@@ -62,13 +60,11 @@ extension CustomTabBarView {
     private func switchToTab(tab: TabBarItem) {
         selection = tab
     }
-    
 }
 
 
 /// Version2  浮空效果
 extension CustomTabBarView {
-    
     
     private var tabBarVersion2: some View {
         HStack{
