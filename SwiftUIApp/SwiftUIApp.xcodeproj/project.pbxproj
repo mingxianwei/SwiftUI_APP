@@ -36,6 +36,7 @@
 		85ECC0D62915154D0013871F /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D52915154D0013871F /* CustomTabBarContainerView.swift */; };
 		85ECC0D82918ED9E0013871F /* TabBarItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D72918ED9E0013871F /* TabBarItemPreferenceKey.swift */; };
 		85ECC0DA2918F1CB0013871F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D92918F1CB0013871F /* TabBarItem.swift */; };
+		85ECC0DD2919083C0013871F /* AppNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0DC2919083B0013871F /* AppNavBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		85ECC0D52915154D0013871F /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		85ECC0D72918ED9E0013871F /* TabBarItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemPreferenceKey.swift; sourceTree = "<group>"; };
 		85ECC0D92918F1CB0013871F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		85ECC0DC2919083B0013871F /* AppNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				851033E228F94B6B002B95C0 /* ContentView.swift */,
 				854F961828FE827B00CDE32E /* UpdateList.swift */,
 				854F961A28FE8DD000CDE32E /* UpdateDetail.swift */,
+				85ECC0DB291907FD0013871F /* CustomNavigationBar */,
 				85ECC0D229150C5B0013871F /* CustomTabBar */,
 				8510340E28FD67BF002B95C0 /* BlurView.swift */,
 				85ECC0B8291380C70013871F /* ViewModifierBootCamp.swift */,
@@ -207,6 +210,14 @@
 				85ECC0D52915154D0013871F /* CustomTabBarContainerView.swift */,
 			);
 			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		85ECC0DB291907FD0013871F /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				85ECC0DC2919083B0013871F /* AppNavBarView.swift */,
+			);
+			path = CustomNavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 				854F961D28FE92DF00CDE32E /* AppTabBarView.swift in Sources */,
 				85ECC0D62915154D0013871F /* CustomTabBarContainerView.swift in Sources */,
 				85ECC0CF2914FE5B0013871F /* GeometryPreferenceKeyBootcamp.swift in Sources */,
+				85ECC0DD2919083C0013871F /* AppNavBarView.swift in Sources */,
 				854F962128FEA44800CDE32E /* CertificateRow.swift in Sources */,
 				85ECC0C52913B29D0013871F /* CustomCurvesBootcamp.swift in Sources */,
 				854F961B28FE8DD000CDE32E /* UpdateDetail.swift in Sources */,
