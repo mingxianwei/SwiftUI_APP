@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
-    /// 默认不显示
+    /// 默认不显示  这个注释可以折叠
+    ///
+    ///
+    ///
+    //
+    
+    //注释标题  这个注释可以折叠
+    /*
+     这是一个可以折叠的注释
+     */
     @State var show = false
     @State var ViewState = CGSize.zero
     

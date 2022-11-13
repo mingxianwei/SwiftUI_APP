@@ -37,6 +37,7 @@
 		85ECC0D82918ED9E0013871F /* TabBarItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D72918ED9E0013871F /* TabBarItemPreferenceKey.swift */; };
 		85ECC0DA2918F1CB0013871F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0D92918F1CB0013871F /* TabBarItem.swift */; };
 		85ECC0DD2919083C0013871F /* AppNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0DC2919083B0013871F /* AppNavBarView.swift */; };
+		85ECC0E0291B940D0013871F /* LazyGridBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECC0DF291B940D0013871F /* LazyGridBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		85ECC0D72918ED9E0013871F /* TabBarItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemPreferenceKey.swift; sourceTree = "<group>"; };
 		85ECC0D92918F1CB0013871F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		85ECC0DC2919083B0013871F /* AppNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavBarView.swift; sourceTree = "<group>"; };
+		85ECC0DF291B940D0013871F /* LazyGridBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyGridBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				851033E228F94B6B002B95C0 /* ContentView.swift */,
 				854F961828FE827B00CDE32E /* UpdateList.swift */,
 				854F961A28FE8DD000CDE32E /* UpdateDetail.swift */,
+				85ECC0DE291B93840013871F /* SwiftUIComponents */,
 				85ECC0DB291907FD0013871F /* CustomNavigationBar */,
 				85ECC0D229150C5B0013871F /* CustomTabBar */,
 				8510340E28FD67BF002B95C0 /* BlurView.swift */,
@@ -218,6 +221,14 @@
 				85ECC0DC2919083B0013871F /* AppNavBarView.swift */,
 			);
 			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
+		85ECC0DE291B93840013871F /* SwiftUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				85ECC0DF291B940D0013871F /* LazyGridBootcamp.swift */,
+			);
+			path = SwiftUIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85ECC0E0291B940D0013871F /* LazyGridBootcamp.swift in Sources */,
 				85ECC0D429150EB90013871F /* CustomTabBarView.swift in Sources */,
 				85ECC0C12913A36A0013871F /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				85ECC0BD291395CC0013871F /* AnyTransitonBootcamp.swift in Sources */,

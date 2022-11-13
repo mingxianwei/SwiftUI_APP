@@ -44,6 +44,10 @@ extension CustomTabBarView {
         .background(Color.white.ignoresSafeArea(edges: .bottom))
     }
     
+    
+    /// TabbBarView 视图的安装  第一种视图
+    /// - Parameter tab: TabBarItem  数据类型
+    /// - Returns: view
     private func tabView(tab:TabBarItem) -> some View {
         VStack{
             Image(systemName: tab.iconName)
@@ -80,7 +84,16 @@ extension CustomTabBarView {
         .padding(.horizontal)
     }
     
-    /// 构建tabBar 视图
+    /// 构建tabBar 浮空效果视图
+    ///
+    ///这个构建tabBar视图 样式2 浮空效果
+    ///
+    ///```
+    ///这中间可以放入代码
+    ///```
+    ///
+    /// - Parameter tab: TabBar对应的数据类型
+    /// - Returns: View
     private func tabView2(tab:TabBarItem) -> some View {
         VStack{
             Image(systemName: tab.iconName)
